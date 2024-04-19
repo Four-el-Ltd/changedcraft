@@ -3,7 +3,8 @@
 	"package": "com.changed.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+    "LivingEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
