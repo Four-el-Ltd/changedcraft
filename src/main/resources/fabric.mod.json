@@ -2,14 +2,13 @@
 	"schemaVersion": 1,
 	"id": "cangedcraft",
 	"version": "${version}",
-	"name": "CangedCraft",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Creeperanium",
+	"description": "Creepers explode on death. Why not?",
 	"authors": [
-		"Me!"
+		"Ruslanllll"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/cangedcraft/icon.png",
@@ -17,9 +16,6 @@
 	"entrypoints": {
 		"main": [
 			"com.changed.CangedCraft"
-		],
-		"fabric-datagen": [
-			"com.changed.CangedCraftDataGenerator"
 		]
 	},
 	"mixins": [
@@ -28,10 +24,9 @@
 	"depends": {
 		"fabricloader": ">=0.15.3",
 		"minecraft": "~1.20.4",
-		"java": ">=17",
-		"fabric-api": "*"
+		"java": ">=17"
 	},
 	"suggests": {
-		"another-mod": "*"
+
 	}
 }

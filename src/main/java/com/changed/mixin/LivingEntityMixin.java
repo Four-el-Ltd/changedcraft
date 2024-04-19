@@ -7,7 +7,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.CreeperEntity;
-import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -25,8 +24,7 @@ public abstract class LivingEntityMixin extends Entity{
     if(entity instanceof CreeperEntity creeper){
       if(damageSource.getAttacker() instanceof PlayerEntity){
         creeper.getWorld().createExplosion(creeper,creeper.getX() , creeper.getY(), creeper.getZ(), 15, ExplosionSourceType.MOB);
-        creeper.onDeath(null);
-    } 
+      } 
     }
   }
   
