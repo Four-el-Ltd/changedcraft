@@ -19,8 +19,8 @@ public abstract class LivingEntityMixin extends Entity{
   }
 
   @Inject(method = "onDeath", at = @At("HEAD"))
-  private void changed$onDeath(CallbackInfo ci, DamageSource damageSource){
-    var entity = (LivingEntity)(Object) this;
+  private void changed$onDeath(DamageSource damageSource, CallbackInfo ci){
+    LivingEntity entity = (LivingEntity)(Object) this;
     if(entity instanceof CreeperEntity creeper){
       if(damageSource.getAttacker() instanceof PlayerEntity){
         creeper.getWorld().createExplosion(creeper,creeper.getX() , creeper.getY(), creeper.getZ(), 15, ExplosionSourceType.MOB);
